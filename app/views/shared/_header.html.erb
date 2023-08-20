@@ -3,6 +3,14 @@
         <li> <%= link_to 'Rails App', root_path %> </li>
         <li> <%= link_to 'Articles', articles_path %> </li>
         <li> <%= link_to 'New Article', new_article_path %> </li>
-        <li> <%= button_to 'Log out', logout_path, method: :delete%> </li>
+
+
+        <% if current_user %>
+            <li> <%= button_to 'Log out', logout_path, method: :delete%> </li>
+            <li> <%= current_user.email %> </li>
+        <% else %>
+            <li> <%= link_to 'Login', login_path %></li>
+            <li> <%= link_to 'Sign Up', signup_path %></li>
+        <% end %>
     </ul>
 </nav>
