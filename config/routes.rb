@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   root "pages#index"
 
-  post "/singup", to: "users#create", as: "new_user_registration"
   get "/signup", to: "users#new", as: "signup"
 
   get "/login", to: "sessions#login", as: "login"
