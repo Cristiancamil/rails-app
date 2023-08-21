@@ -1,7 +1,7 @@
-<h1>Sing up</h1>
+<h1>Edit user</h1>
 
 <div>
-    <%= form_with(model: @user, url: new_user_registration_path) do |form| %>
+    <%= form_with(model: @user) do |form| %>
 
         <% if @user.errors.any? %>
             <div id="error_explanation">
@@ -31,8 +31,9 @@
         </div>
 
         <div>
-            <%= form.submit 'Sign up' %>
+            <%= form.submit 'Edit User' %>
         </div>
 
     <% end %>
 </div>
+

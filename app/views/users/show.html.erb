@@ -1,0 +1,7 @@
+<h3>User</h3>
+
+<div>
+    <%= @user.email %>
+    <%= link_to 'Edit user', edit_user_path(@user) %>
+    <%= button_to 'Delete user', user_path(@user), method: :delete %>
+</div>

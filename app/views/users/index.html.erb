@@ -1,0 +1,7 @@
+<h1>Users</h1>
+
+<div>
+    <% @user.each do |user| %>
+        <%= render 'user', user: user %>
+    <% end %>
+</div>
